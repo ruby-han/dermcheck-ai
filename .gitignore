@@ -1,5 +1,6 @@
 # Custom
 dermnet/
+*.pt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
