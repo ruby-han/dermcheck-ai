@@ -1,6 +1,7 @@
 # Custom
 Data/
 *.pt
+data_class_folder/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
