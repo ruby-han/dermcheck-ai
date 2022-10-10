@@ -1,7 +1,8 @@
 # Custom
 Data/
-*.pt
 data_class_folder/
+simple_images/
+model/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
