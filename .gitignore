@@ -5,6 +5,7 @@ data_class_folder1/
 data_class_folder2/
 simple_images/
 model/
+.env
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
