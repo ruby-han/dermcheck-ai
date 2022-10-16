@@ -1,8 +1,7 @@
 # Custom
 Data/
 data/
-data_class_folder1/
-data_class_folder2/
+data_class_folder*/
 simple_images/
 model/
 .env
