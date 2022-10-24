@@ -4,6 +4,7 @@ data/
 data_class_folder*/
 simple_images/
 model/
+yolov5/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
