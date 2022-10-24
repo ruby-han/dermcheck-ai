@@ -8,3 +8,4 @@ sklearn
 pandas_profiling
 awswrangler
 ipywidgets
+coremltools
