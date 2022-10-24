@@ -1,0 +1,9 @@
+names:
+- Benign Marking or Mole
+- Non-Cancerous Skin Condition
+- Potentially Malignant Skin Tumors
+- Toxin
+- Unclassified
+nc: 5
+train: /home/studio-lab-user/teledermatologyAI_capstone/objDetection/datasets/w210_teledermatologyAI-15/train/images
+val: /home/studio-lab-user/teledermatologyAI_capstone/objDetection/datasets/w210_teledermatologyAI-15/valid/images
