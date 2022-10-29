@@ -9,3 +9,4 @@ pandas_profiling
 awswrangler
 ipywidgets
 coremltools
+torch_lr_finder
