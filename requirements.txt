@@ -10,3 +10,4 @@ awswrangler
 ipywidgets
 coremltools
 torch_lr_finder
+pytorchtools
