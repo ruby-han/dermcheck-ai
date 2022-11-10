@@ -5,7 +5,7 @@ data_class_folder*/
 simple_images/
 model/
 yolov5/
-w210env/
+w210_env/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

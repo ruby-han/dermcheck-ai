@@ -3,7 +3,6 @@ matplotlib
 scikit-image
 basic-image-eda
 seaborn
-torchvision
 sklearn
 pandas_profiling
 awswrangler
@@ -11,3 +10,4 @@ ipywidgets
 coremltools
 torch_lr_finder
 pytorchtools
+torchvision
