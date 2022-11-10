@@ -3,7 +3,7 @@ matplotlib
 scikit-image
 basic-image-eda
 seaborn
-sklearn
+scikit-learn
 pandas_profiling
 awswrangler
 ipywidgets
