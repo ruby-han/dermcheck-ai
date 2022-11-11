@@ -21,12 +21,13 @@ from torch import optim,nn
 from torch.autograd import Variable
 from torch.utils.data import DataLoader,Dataset
 from torchvision import models,transforms
-# from efficientnet_pytorch import EfficientNet
+from efficientnet_pytorch import EfficientNet
 
 # sklearn libraries
 from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
+from sklearn.metrics import accuracy_score, f1_score, fbeta_score, precision_score, recall_score
 
 # feature_extract is a boolean that defines if we are finetuning or feature extracting. 
 # If feature_extract = False, the model is finetuned and all model parameters are updated. 
@@ -92,7 +93,7 @@ def initialize_model(model_name, num_classes, feature_extract, use_pretrained=Tr
         model_ft = EfficientNet.from_pretrained('efficientnet-b7',num_classes=num_classes)
         set_parameter_requires_grad(model_ft, feature_extract)
 
-#         # Handle the primary net
+        # Handle the primary net
 #         num_ftrs = model_ft.fc.in_features
 #         model_ft.fc = nn.Linear(num_ftrs,num_classes)
         input_size = 600
@@ -262,7 +263,7 @@ class AverageMeter(object):
         self.avg = self.sum / self.count
 
         
-def eval_model(labs, preds, label_dict, show_cm = True):
+def eval_model(labs, preds, label_dict, show_cm = True, cm_normalize = True):
     labs = np.array(list(itertools.chain(*labs)))
     preds = np.array(list(itertools.chain(*preds)))
     
@@ -314,6 +315,8 @@ def run(mode, loader, model, criterion, optimizer, epoch, model_dict):
             loss.backward()
             optimizer.step()
             prediction = outputs.max(1, keepdim=True)[1]
+            predictions_out.append(prediction.cpu().numpy()) #glnew
+            true_labels.append(labels.cpu().numpy()) #glnew
             acc.update(prediction.eq(labels.view_as(prediction)).sum().item()/N)
             mode_loss.update(loss.item())
             curr_iter += 1
@@ -335,9 +338,10 @@ def run(mode, loader, model, criterion, optimizer, epoch, model_dict):
                 outputs = model(images)
                 prediction = outputs.max(1, keepdim=True)[1]
                 
+                
+                predictions_out.append(prediction.cpu().numpy())
+                true_labels.append(labels.cpu().numpy())
                 if mode == 'test':
-                    predictions_out.append(prediction.cpu().numpy())
-                    true_labels.append(labels.cpu().numpy())
                     epoch = 'test'
                 
                 acc.update(prediction.eq(labels.view_as(prediction)).sum().item()/N)
@@ -348,10 +352,11 @@ def run(mode, loader, model, criterion, optimizer, epoch, model_dict):
         print(f'[epoch {epoch}], [{mode} loss {mode_loss.avg:.5f}], [{mode} acc {acc.avg:.5f}]')
         print('------------------------------------------------------------')
     
-    if (mode == 'train') | (mode == 'val'):
-        return mode_loss.avg, acc.avg
-    elif mode == 'test':
-        return mode_loss.avg, acc.avg, predictions_out, true_labels
+#     if (mode == 'train') | (mode == 'val'):
+#         return mode_loss.avg, acc.avg
+#     elif mode == 'test':
+#         return mode_loss.avg, acc.avg, predictions_out, true_labels
+    return mode_loss.avg, acc.avg, predictions_out, true_labels
 
 def train_model(model_dict):    
 
@@ -359,6 +364,7 @@ def train_model(model_dict):
     best_val_acc = 0
     total_loss_val, total_acc_val = [],[]
     total_since = time.time()
+    best_pred_df = None
     
     # Instantiate variables from dictionary
 #     train_loader = loaders['train_loader']
@@ -371,7 +377,7 @@ def train_model(model_dict):
     model_name = model_dict['tuned_model_name']
     train_loader = model_dict['loader']['train_loader']
     val_loader = model_dict['loader']['val_loader']
-    
+    label_dict = model_dict['label_dict']
     
     print(f'Starting Training {model_name}')
 
@@ -382,9 +388,19 @@ def train_model(model_dict):
         since = time.time()
         
         # Calculate loss and acc
-        loss_train, acc_train = run('train', train_loader, model, criterion, optimizer, epoch, model_dict)
-        loss_val, acc_val = run('val', val_loader, model, criterion, optimizer, epoch, model_dict)
-
+#                 loss_train, acc_train, train_preds, train_labs = run('train', train_loader, model, criterion, optimizer, epoch, model_dict)
+#         loss_val, acc_val, val_preds, val_labs = run('val', val_loader, model, criterion, optimizer, epoch, model_dict)
+        loss_train, acc_train, train_preds, train_labs = run('train', train_loader, model, criterion, optimizer, epoch, model_dict) #glnew
+        loss_val, acc_val, val_preds, val_labs = run('val', val_loader, model, criterion, optimizer, epoch, model_dict) #glnew
+        
+        # metrics
+#         train_scores = model_scores(train_labs, train_preds)
+#         val_scores = model_scores(val_labs, val_preds)
+        _, train_scores = eval_model(train_labs, train_preds, label_dict, False)
+        pred_df, val_scores = eval_model(val_labs, val_preds, label_dict, model_dict['show_val_cm'])
+        
+#         print('train_scores', train_scores)
+#         print('val_scores', val_scores)
         # Track loss and acc
         total_loss_val.append(loss_val)
         total_acc_val.append(acc_val)
@@ -393,6 +409,7 @@ def train_model(model_dict):
         if acc_val > best_val_acc:
             best_val_acc = acc_val
             torch.save(model, f'{model_directory}/{model_name}.pt')
+            best_pred_df = pred_df
 
         time_elapsed = time.time() - since
 
@@ -404,17 +421,22 @@ def train_model(model_dict):
 
     total_time_elapsed = time.time() - total_since
     print('\nTotal run Complete in {:.0f}m {:.0f}s'.format(total_time_elapsed // 60, total_time_elapsed % 60))
+    tt = (total_time_elapsed //60)
+#     print(val_scores)
+    return best_pred_df, val_scores, tt
     
 def model_scores(true_labs, preds):
-    acc = accuracy_score(d.lab, d.pred)
-    f1 = f1_score(d.lab, d.pred, average = 'macro')
-    f2 = fbeta_score(d.lab, d.pred, average = 'macro', beta = 2)
-    f5 =  fbeta_score(d.lab, d.pred, average = 'macro', beta = .5)
-    prec = precision_score(d.lab, d.pred, average = 'macro')
-    rec = recall_score(d.lab, d.pred, average = 'macro')
+    true_labs = pd.Series(true_labs)
+    preds = pd.Series(preds)
+    acc = accuracy_score(true_labs, preds)
+    f1 = f1_score(true_labs, preds, average = 'macro')
+    f2 = fbeta_score(true_labs, preds, average = 'macro', beta = 2)
+    f5 =  fbeta_score(true_labs, preds, average = 'macro', beta = .5)
+    prec = precision_score(true_labs, preds, average = 'macro')
+    rec = recall_score(true_labs, preds, average = 'macro')
     
     # confusion matrix & Diags
-    c_matrix = confusion_matrix(d.lab, d.pred, normalize = 'true')
+    c_matrix = confusion_matrix(true_labs, preds, normalize = 'true')
     d_0 = c_matrix[0,0]
     d_1 = c_matrix[1,1]
     d_2 = c_matrix[2,2]
@@ -422,3 +444,39 @@ def model_scores(true_labs, preds):
     d_4 = c_matrix[4,4]
     
     return acc, f1, f2, f5, prec, rec, d_0, d_1, d_2, d_3, d_4
+
+def add_results(result_file, directory, new_row):
+    
+    # instantiate empty df if needed
+    empty = pd.DataFrame({
+#              'model': pd.Series(dtype = 'int'),
+#              'file': pd.Series(dtype = 'str'),
+             'tuned_model': pd.Series(dtype = 'str'),
+             'transform': pd.Series(dtype = 'int'),
+             'lr': pd.Series(dtype = 'float'),
+             'pretrained_model': pd.Series(dtype = 'str'),
+             'optimizer': pd.Series(dtype = 'str'),
+             'epochs': pd.Series(dtype = 'int'),
+#              'num_classes': pd.Series(dtype = 'int'),
+             'batch_size': pd.Series(dtype = 'int'),
+             'workers': pd.Series(dtype = 'int'),
+             'train_time': pd.Series(dtype = 'str'),
+             'data_split': pd.Series(dtype = 'str'),
+             'label_set': pd.Series(dtype = 'str'),
+             'accur': pd.Series(dtype = 'float'),
+             'F1': pd.Series(dtype = 'float'),
+             'F0.5': pd.Series(dtype = 'float'),
+             'F2': pd.Series(dtype = 'float'),
+             'benign_accur': pd.Series(dtype = 'float'),
+             'noncancerous_accur': pd.Series(dtype = 'float'),
+             'malignant_accur': pd.Series(dtype = 'float'),
+             'infection_accur': pd.Series(dtype = 'float'),
+             'unclassified_accur': pd.Series(dtype = 'float')})
+    
+    if f'{result_file}.csv' not in os.listdir(directory):
+        print('creating file')
+        empty.to_csv(f'{directory}/{result_file}.csv')
+    
+    file = pd.read_csv(f'{directory}/{result_file}.csv', index_col = 0)
+    updated_file = pd.concat([file, new_row])
+    updated_file.to_csv(f'{directory}/{result_file}.csv')
