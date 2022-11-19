@@ -1,0 +1,6 @@
+framework module Pods_dermCheckAI {
+  umbrella header "Pods-dermCheckAI-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "george_jiang.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

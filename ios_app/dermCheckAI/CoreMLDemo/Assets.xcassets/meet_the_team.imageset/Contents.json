@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "meet_the_team.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
