@@ -1,1 +1,0 @@
-# teledermatologyAI_capstone
