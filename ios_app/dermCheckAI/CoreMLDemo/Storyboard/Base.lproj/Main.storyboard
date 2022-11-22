@@ -87,6 +87,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2tI-s2-tpu" secondAttribute="bottom" constant="16" id="7ao-KB-Qvj"/>
                             <constraint firstItem="Kr5-PT-EsM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="Jt3-D8-h4T"/>
@@ -343,6 +344,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gWC-l1-K64" firstAttribute="top" secondItem="TMT-hv-YCr" secondAttribute="bottom" constant="16" id="4ac-rF-1bN"/>
                             <constraint firstItem="TMT-hv-YCr" firstAttribute="width" secondItem="TMT-hv-YCr" secondAttribute="height" multiplier="1:1" id="56E-1q-15e"/>
@@ -404,44 +406,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="characterWrap" preferredBehavioralStyle="pad" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H64-8E-WUW">
-                                <rect key="frame" x="129" y="416" width="156" height="138"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.97098596319999997" green="0.86883560670000004" blue="0.91705004779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Submit Your Photo">
-                                            <attributes>
-                                                <font key="NSFont" size="18" name="Helvetica-Bold"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="jlx-eY-Zrw" kind="presentation" id="unW-wW-S30"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="o3v-E2-T6P">
-                                <rect key="frame" x="135" y="430" width="145" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DermCheck.AI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YL8-ja-nKm">
-                                <rect key="frame" x="104" y="137" width="206" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
-                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" preferredBehavioralStyle="pad" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q13-gO-gdH">
-                                <rect key="frame" x="20" y="606" width="105" height="93"/>
+                                <rect key="frame" x="20" y="572" width="105" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97098596319999997" green="0.86883560670000004" blue="0.91705004779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" systemColor="labelColor"/>
@@ -461,13 +427,16 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="V30-Bs-q1W" kind="presentation" id="dxX-6i-qqh"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="faq" translatesAutoresizingMaskIntoConstraints="NO" id="gVy-QV-A0l">
-                                <rect key="frame" x="37" y="622" width="70" height="52"/>
+                                <rect key="frame" x="37" y="588" width="70" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" preferredBehavioralStyle="pad" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Orm-P4-7ZL">
-                                <rect key="frame" x="155" y="606" width="105" height="93"/>
+                                <rect key="frame" x="155" y="572" width="105" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97098596319999997" green="0.86883560670000004" blue="0.91705004779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" systemColor="labelColor"/>
@@ -487,13 +456,16 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="dQE-Iv-SNz" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="FEC-Kl-xTs"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="how_to_use" translatesAutoresizingMaskIntoConstraints="NO" id="MXF-UF-lTT">
-                                <rect key="frame" x="172" y="622" width="70" height="52"/>
+                                <rect key="frame" x="172" y="588" width="70" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="characterWrap" preferredBehavioralStyle="pad" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8PO-P9-u5D">
-                                <rect key="frame" x="289" y="606" width="105" height="93"/>
+                                <rect key="frame" x="289" y="572" width="105" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97098596319999997" green="0.86883560670000004" blue="0.91705004779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" systemColor="labelColor"/>
@@ -518,19 +490,56 @@
                                     <segue destination="qiA-um-gg5" kind="presentation" id="tKg-j1-Pju"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="meet_the_team" translatesAutoresizingMaskIntoConstraints="NO" id="DPV-YO-pHk">
+                                <rect key="frame" x="306" y="588" width="70" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="characterWrap" preferredBehavioralStyle="pad" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H64-8E-WUW">
+                                <rect key="frame" x="129" y="379" width="156" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97098596319999997" green="0.86883560670000004" blue="0.91705004779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Submit Your Photo">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="jlx-eY-Zrw" kind="presentation" id="unW-wW-S30"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="o3v-E2-T6P">
+                                <rect key="frame" x="135" y="393" width="145" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DermCheck.AI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YL8-ja-nKm">
+                                <rect key="frame" x="104" y="111" width="206" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle.hexagongrid.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wke-Zu-Dwg">
-                                <rect key="frame" x="141" y="216" width="133" height="128"/>
+                                <rect key="frame" x="140" y="190" width="133" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="meet_the_team" translatesAutoresizingMaskIntoConstraints="NO" id="DPV-YO-pHk">
-                                <rect key="frame" x="306" y="622" width="70" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="fTq-HU-i3I"/>
                 </viewController>
@@ -610,6 +619,7 @@
                                                 <constraint firstItem="GW4-4V-4yd" firstAttribute="top" secondItem="hdp-F2-qEL" secondAttribute="bottom" constant="35" id="poC-4D-XFk"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="375" height="513"/>
                                         <connections>
                                             <outlet property="slideDescriptionLbl" destination="LPv-Fv-pXt" id="vwK-Qv-rjV"/>
@@ -654,6 +664,7 @@
                                 <color key="currentPageIndicatorTintColor" red="0.97098596319999997" green="0.86883560670000004" blue="0.91705004779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                         </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="1WG-U5-HX4" id="J1V-ZV-KHU"/>
@@ -663,6 +674,108 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uUU-s6-YL2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-175.36231884057972" y="898.66071428571422"/>
+        </scene>
+        <!--How To Use View Controller-->
+        <scene sceneID="jSV-27-c2l">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="dQE-Iv-SNz" customClass="HowToUseViewController" customModule="dermCheckAI" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Aq-72-4JJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="g5U-u0-oA6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GAN-iC-7Za">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Diw-yc-Wi4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1156"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="78x-rC-Xg1">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How To Use" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHD-83-Ajo">
+                                                <rect key="frame" x="50" y="360" width="169" height="36"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2h-9q-Dg0">
+                                                <rect key="frame" x="50" y="404" width="333" height="668"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">1) Select the Submit Your Photo button on the home page.
+
+2) Take a picture of the area of interest with apt lighting or select your photo from the gallery. The mobile app works best when the area of interest is zoomed in and no additional objects are present in the background.
+
+3) The resulting prediction will be displayed at the bottom of the image. 
+
+4) Select the Find a Dermatologist button to locate dermatologists nearby for further review.
+
+5) Select a dermatologist and review details. When ready, select Book Appointment button.
+
+6) A confirmation page will be displayed. Select Home button to return to the home page.</string>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" preferredBehavioralStyle="pad" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KB7-J4-sjW">
+                                                <rect key="frame" x="172" y="1096" width="67" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.97098596319999997" green="0.86883560670000004" blue="0.91705004779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Back">
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="dGt-BP-yvl" kind="presentation" id="vcH-pN-nqA"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="how_to_use2" translatesAutoresizingMaskIntoConstraints="NO" id="8q4-pp-Yel">
+                                                <rect key="frame" x="50" y="85" width="311" height="240"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.97098596319999997" green="0.86883560670000004" blue="0.91705004779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1200" id="RgT-1R-q7V"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="78x-rC-Xg1" firstAttribute="top" secondItem="Diw-yc-Wi4" secondAttribute="top" id="mgs-zZ-f8F"/>
+                                    <constraint firstItem="78x-rC-Xg1" firstAttribute="leading" secondItem="Diw-yc-Wi4" secondAttribute="leading" id="nC2-Pz-32v"/>
+                                    <constraint firstAttribute="bottom" secondItem="78x-rC-Xg1" secondAttribute="bottom" id="sjI-de-xpk"/>
+                                    <constraint firstAttribute="trailing" secondItem="78x-rC-Xg1" secondAttribute="trailing" id="vk7-po-3ZZ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Diw-yc-Wi4" firstAttribute="top" secondItem="6Aq-72-4JJ" secondAttribute="bottom" id="0Kr-gw-IJv"/>
+                            <constraint firstItem="Diw-yc-Wi4" firstAttribute="leading" secondItem="GAN-iC-7Za" secondAttribute="leading" id="Xqx-se-LPd"/>
+                            <constraint firstItem="78x-rC-Xg1" firstAttribute="width" secondItem="GAN-iC-7Za" secondAttribute="width" id="fXF-wl-TRf"/>
+                            <constraint firstAttribute="trailing" secondItem="Diw-yc-Wi4" secondAttribute="trailing" id="pCo-NM-Wgu"/>
+                            <constraint firstAttribute="bottom" secondItem="Diw-yc-Wi4" secondAttribute="bottom" id="vEZ-B2-RXg"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="414" height="1200"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="15b-Q3-pPn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1907" y="1710"/>
         </scene>
         <!--Appointment ConfirmVC-->
         <scene sceneID="cSK-qX-keV">
@@ -712,6 +825,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iBL-5O-qD1"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="a9S-G9-yN1" firstAttribute="top" secondItem="RJy-ab-XLH" secondAttribute="bottom" constant="8" id="1Nf-rY-Evf"/>
                             <constraint firstItem="o4y-H4-mHq" firstAttribute="top" secondItem="a9S-G9-yN1" secondAttribute="bottom" constant="8" id="2qu-Qz-pvc"/>
@@ -736,9 +850,116 @@
             </objects>
             <point key="canvasLocation" x="3309" y="169"/>
         </scene>
+        <!--Faq View Controller-->
+        <scene sceneID="3EA-5n-1Oa">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="V30-Bs-q1W" customClass="FaqViewController" customModule="dermCheckAI" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bHt-9Z-0g8"/>
+                        <viewControllerLayoutGuide type="bottom" id="T4I-cG-Ubl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qgc-oF-7fD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nw9-CS-llK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1456"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gv7-QZ-iZr">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is DermCheck.AI?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGP-sd-Bdl">
+                                                <rect key="frame" x="50" y="360" width="282" height="95"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOs-iR-7AF">
+                                                <rect key="frame" x="50" y="463" width="333" height="241"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">DermCheck.AI was developed to classify different user-submitted skin images to their nearest category diagnosis. Users should be able to use this simple app to reduce wasted time and money spent at the doctor’s office and detect possible life-threatening markings that should motivate a trip to their physicians.</string>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" preferredBehavioralStyle="pad" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ACL-tg-fgf">
+                                                <rect key="frame" x="172" y="1427" width="67" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.97098596319999997" green="0.86883560670000004" blue="0.91705004779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Back">
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="dGt-BP-yvl" kind="presentation" id="MVv-75-deO"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="faq2" translatesAutoresizingMaskIntoConstraints="NO" id="ylx-CX-77O">
+                                                <rect key="frame" x="50" y="85" width="311" height="240"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.97098596319999997" green="0.86883560670000004" blue="0.91705004779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is DermCheck.AI?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvB-Mh-cU7">
+                                                <rect key="frame" x="50" y="737" width="282" height="95"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMq-df-7yq">
+                                                <rect key="frame" x="50" y="840" width="333" height="275"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">According to the National Institute of Health, skin conditions are one of the most prevalent ailments in America, affecting one in three people at any given time. However, the varying degrees of severity leave many prospective patients wondering if they require physician consultation or if they would be able to carry on without a hefty trip to the doctor’s office.</string>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1500" id="ool-UM-VJc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Gv7-QZ-iZr" secondAttribute="trailing" id="352-cW-poK"/>
+                                    <constraint firstItem="Gv7-QZ-iZr" firstAttribute="top" secondItem="Nw9-CS-llK" secondAttribute="top" id="MV3-0k-OL9"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gv7-QZ-iZr" secondAttribute="bottom" id="eWN-vU-g3T"/>
+                                    <constraint firstItem="Gv7-QZ-iZr" firstAttribute="leading" secondItem="Nw9-CS-llK" secondAttribute="leading" id="ssR-wd-qWm"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Gv7-QZ-iZr" firstAttribute="width" secondItem="Qgc-oF-7fD" secondAttribute="width" id="3vQ-Eo-cEf"/>
+                            <constraint firstAttribute="bottom" secondItem="Nw9-CS-llK" secondAttribute="bottom" id="MEh-G7-JZe"/>
+                            <constraint firstAttribute="trailing" secondItem="Nw9-CS-llK" secondAttribute="trailing" id="SKY-Db-tzw"/>
+                            <constraint firstItem="Nw9-CS-llK" firstAttribute="top" secondItem="bHt-9Z-0g8" secondAttribute="bottom" id="TEa-yy-h4D"/>
+                            <constraint firstItem="Nw9-CS-llK" firstAttribute="leading" secondItem="Qgc-oF-7fD" secondAttribute="leading" id="dAP-XO-YGt"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="414" height="1500"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fUo-Tr-ziq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-591" y="1810"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="g4b-9p-Ziv"/>
+        <segue reference="MVv-75-deO"/>
         <segue reference="JCa-PR-WKJ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemBlueColor"/>
@@ -749,7 +970,9 @@
         <image name="doctor1" width="512" height="512"/>
         <image name="doctor2" width="512" height="512"/>
         <image name="faq" width="512" height="512"/>
+        <image name="faq2" width="2000" height="2000"/>
         <image name="how_to_use" width="60" height="60"/>
+        <image name="how_to_use2" width="7500" height="5000"/>
         <image name="meet_the_team" width="512" height="512"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <systemColor name="labelColor">

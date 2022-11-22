@@ -25,10 +25,10 @@ class TeamMembersViewController: UIViewController {
         // collectionView.dataSource = self
         
         slides = [
-            TeamMemberSlide(title: "Ruby Han", description: "Data Scientist", image: #imageLiteral(resourceName: "ruby_han")),
+            TeamMemberSlide(title: "Ruby Han", description: "Modeling & Analytics Engineer / Data Scientist", image: #imageLiteral(resourceName: "ruby_han")),
             TeamMemberSlide(title: "George Jiang", description: "Data Scientist", image: #imageLiteral(resourceName: "george_jiang")),
-            TeamMemberSlide(title: "Gerrit Lensik", description: "Data Scientist", image: #imageLiteral(resourceName: "gerrit_lensink")),
-            TeamMemberSlide(title: "Shivani Sharma", description: "Data Scientist", image: #imageLiteral(resourceName: "shivani_sharma"))
+            TeamMemberSlide(title: "Gerrit Lensink", description: "Data Scientist", image: #imageLiteral(resourceName: "gerrit_lensink")),
+            TeamMemberSlide(title: "Shivani Sharma", description: "Senior Consultant", image: #imageLiteral(resourceName: "shivani_sharma"))
             
         ]
     }
