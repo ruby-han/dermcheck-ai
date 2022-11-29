@@ -15,7 +15,7 @@ class SubmitPhotoViewController: UIViewController, UINavigationControllerDelegat
     @IBOutlet weak var classifier: UILabel!
     
     // Declare ML Model
-    var model: resnet_10e_SGD_GS9!
+    var model: split_8_resnet_10e_AdamW!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class SubmitPhotoViewController: UIViewController, UINavigationControllerDelegat
     
     override func viewWillAppear(_ animated: Bool) {
         // Initialize ML model
-        model = resnet_10e_SGD_GS9()
+        model = split_8_resnet_10e_AdamW()
     }
     
     override func didReceiveMemoryWarning() {
