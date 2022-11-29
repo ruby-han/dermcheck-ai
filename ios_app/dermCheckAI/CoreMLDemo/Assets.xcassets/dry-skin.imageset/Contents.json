@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "dry-skin.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

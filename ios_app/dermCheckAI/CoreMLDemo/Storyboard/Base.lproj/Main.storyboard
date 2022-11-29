@@ -30,7 +30,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Kr5-PT-EsM" secondAttribute="height" multiplier="1:1" id="nMP-KB-GU7"/>
                                 </constraints>
-                                <imageReference key="image" image="photo" catalog="system" symbolScale="small"/>
+                                <imageReference key="image" image="dry-skin" symbolScale="small"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" preferredBehavioralStyle="pad" translatesAutoresizingMaskIntoConstraints="NO" id="2tI-s2-tpu">
                                 <rect key="frame" x="52" y="640" width="311" height="30"/>
@@ -76,13 +76,13 @@
                                     <segue destination="dGt-BP-yvl" kind="presentation" id="dqA-fI-pnK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Take a photo or select image from library" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="44X-lV-OJs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Instruction: Take a photo or select image from library" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="44X-lV-OJs">
                                 <rect key="frame" x="36" y="496" width="343" height="66"/>
                                 <color key="tintColor" red="0.9994125962" green="0.4018217623" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="jY0-rR-qNp"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -101,7 +101,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GMb-rR-dZK">
-                        <barButtonItem key="leftBarButtonItem" image="camera" catalog="system" id="07F-LG-XKG">
+                        <barButtonItem key="leftBarButtonItem" id="07F-LG-XKG">
+                            <imageReference key="image" image="camera" catalog="system" symbolScale="large"/>
                             <color key="tintColor" systemColor="systemBackgroundColor"/>
                             <connections>
                                 <action selector="camera:" destination="BYZ-38-t0r" id="YEa-5i-cGl"/>
@@ -291,8 +292,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yjC-J7-60h">
                                         <rect key="frame" x="139" y="0.0" width="243" height="49"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mason Phung " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8Z-7i-yJi">
-                                                <rect key="frame" x="134.5" y="0.0" width="108.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Isabella Long" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8Z-7i-yJi">
+                                                <rect key="frame" x="143" y="0.0" width="100" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
@@ -859,14 +860,14 @@
                         <viewControllerLayoutGuide type="bottom" id="T4I-cG-Ubl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Qgc-oF-7fD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="2500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nw9-CS-llK">
-                                <rect key="frame" x="0.0" y="44" width="414" height="1456"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nw9-CS-llK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="2500"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gv7-QZ-iZr">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2500"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is DermCheck.AI?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGP-sd-Bdl">
                                                 <rect key="frame" x="50" y="360" width="282" height="95"/>
@@ -876,15 +877,17 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOs-iR-7AF">
-                                                <rect key="frame" x="50" y="463" width="333" height="241"/>
+                                                <rect key="frame" x="50" y="463" width="333" height="402"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <string key="text">DermCheck.AI was developed to classify different user-submitted skin images to their nearest category diagnosis. Users should be able to use this simple app to reduce wasted time and money spent at the doctor’s office and detect possible life-threatening markings that should motivate a trip to their physicians.</string>
+                                                <string key="text">DermCheck.AI was developed to classify up to five categories of user-submitted skin images to their nearest category diagnosis encompassing an estimate of 120 different skin diseases which ranges from the most malignant skin cancers to the most common skin diseases. 
+
+Users should be able to use this simple app to reduce wasted time and money spent at the doctor’s office and detect possible life-threatening markings that should motivate a trip to their physicians.</string>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" preferredBehavioralStyle="pad" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ACL-tg-fgf">
-                                                <rect key="frame" x="172" y="1427" width="67" height="31"/>
+                                                <rect key="frame" x="174" y="2375" width="67" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.97098596319999997" green="0.86883560670000004" blue="0.91705004779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
@@ -913,24 +916,59 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.97098596319999997" green="0.86883560670000004" blue="0.91705004779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is DermCheck.AI?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvB-Mh-cU7">
-                                                <rect key="frame" x="50" y="737" width="282" height="95"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMq-df-7yq">
+                                                <rect key="frame" x="50" y="985" width="333" height="531"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <mutableString key="text">According to the National Institute of Health, skin conditions are one of the most prevalent ailments in America, affecting one in four people at any given time. However, the varying degrees of severity leave many prospective patients wondering if they require physician consultation or if they would be able to carry on without a hefty trip to the doctor’s office. 
+
+In addition, there is an expected $15 billion dollar global skin cancer treatment market size by year 2027 with an estimated 85% of Americans owning a smartphone. DermCheck.AI is a free assistive tool allowing anyone to check their skin markings of concern and book a trip to the doctor’s office in just a click away.</mutableString>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What are the user outcomes?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56E-3M-Udt">
+                                                <rect key="frame" x="50" y="1561" width="309" height="72"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMq-df-7yq">
-                                                <rect key="frame" x="50" y="840" width="333" height="275"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sM-bQ-Zjk">
+                                                <rect key="frame" x="50" y="1641" width="333" height="685"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <string key="text">According to the National Institute of Health, skin conditions are one of the most prevalent ailments in America, affecting one in three people at any given time. However, the varying degrees of severity leave many prospective patients wondering if they require physician consultation or if they would be able to carry on without a hefty trip to the doctor’s office.</string>
+                                                <string key="text">1) Benign
+Example Diagnosis: Moles, Nevi and Dermatofibroma
+User Action: No action required
+
+2) Skin Condition
+Example Diagnosis: Eczema, Acne and Dermatitis
+User Action: Contact physician (lower risk)
+
+3) Infection
+Example Diagnosis: Warts, Fungus and Ringworm
+User Action: Contact physician (lower risk)
+
+4) Malignant
+Example Diagnosis: Melanoma, Carcinoma and Keratosis
+User Action: Contact physician (higher risk)
+
+5) Unclassified
+Example Diagnosis: Unknown
+User Action: Contact physician (higher risk)</string>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Why does this matter?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvB-Mh-cU7">
+                                                <rect key="frame" x="52" y="889" width="311" height="72"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1500" id="ool-UM-VJc"/>
+                                            <constraint firstAttribute="height" constant="2500" id="ool-UM-VJc"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -951,11 +989,11 @@
                             <constraint firstItem="Nw9-CS-llK" firstAttribute="leading" secondItem="Qgc-oF-7fD" secondAttribute="leading" id="dAP-XO-YGt"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="414" height="1500"/>
+                    <size key="freeformSize" width="414" height="2500"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUo-Tr-ziq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-591" y="1810"/>
+            <point key="canvasLocation" x="-733.33333333333337" y="2172.3214285714284"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -964,17 +1002,17 @@
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemBlueColor"/>
     <resources>
-        <image name="camera" width="307.30801391601562" height="307.30801391601562"/>
         <image name="camera" catalog="system" width="128" height="94"/>
+        <image name="camera" width="307.30801391601562" height="307.30801391601562"/>
         <image name="circle.hexagongrid.circle" catalog="system" width="128" height="121"/>
         <image name="doctor1" width="512" height="512"/>
         <image name="doctor2" width="512" height="512"/>
+        <image name="dry-skin" width="512" height="512"/>
         <image name="faq" width="512" height="512"/>
         <image name="faq2" width="2000" height="2000"/>
         <image name="how_to_use" width="60" height="60"/>
         <image name="how_to_use2" width="7500" height="5000"/>
         <image name="meet_the_team" width="512" height="512"/>
-        <image name="photo" catalog="system" width="128" height="93"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

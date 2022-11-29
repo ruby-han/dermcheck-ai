@@ -17,7 +17,7 @@
 		C6422A6B2928795A00F20EA5 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6422A6A2928795900F20EA5 /* Member.swift */; };
 		C6422A6D29287DEA00F20EA5 /* TeamMembersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6422A6C29287DEA00F20EA5 /* TeamMembersCollectionViewCell.swift */; };
 		C6422A6F292C59DF00F20EA5 /* HowToUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6422A6E292C59DF00F20EA5 /* HowToUseViewController.swift */; };
-		C6F3CB3B29271DF500F14697 /* resnet_20e_SGD_GS27.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C6F3CB3A29271DF500F14697 /* resnet_20e_SGD_GS27.mlmodel */; };
+		C6E28A542935A0EA009BC538 /* resnet_10e_SGD_GS9.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C6E28A532935A0EA009BC538 /* resnet_10e_SGD_GS9.mlmodel */; };
 		F44543791EF0461F0024AFAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44543781EF0461F0024AFAC /* AppDelegate.swift */; };
 		F445437B1EF0461F0024AFAC /* SubmitPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F445437A1EF0461F0024AFAC /* SubmitPhotoViewController.swift */; };
 		F445437E1EF0461F0024AFAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F445437C1EF0461F0024AFAC /* Main.storyboard */; };
@@ -38,7 +38,7 @@
 		C6422A6A2928795900F20EA5 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		C6422A6C29287DEA00F20EA5 /* TeamMembersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMembersCollectionViewCell.swift; sourceTree = "<group>"; };
 		C6422A6E292C59DF00F20EA5 /* HowToUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToUseViewController.swift; sourceTree = "<group>"; };
-		C6F3CB3A29271DF500F14697 /* resnet_20e_SGD_GS27.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = resnet_20e_SGD_GS27.mlmodel; sourceTree = SOURCE_ROOT; };
+		C6E28A532935A0EA009BC538 /* resnet_10e_SGD_GS9.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = resnet_10e_SGD_GS9.mlmodel; sourceTree = "<group>"; };
 		F44543751EF0461F0024AFAC /* dermCheckAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dermCheckAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44543781EF0461F0024AFAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F445437A1EF0461F0024AFAC /* SubmitPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitPhotoViewController.swift; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 				261DA835223D41310056C40C /* Storyboard */,
 				261DA83C223DAE700056C40C /* Animation */,
 				F445437F1EF0461F0024AFAC /* Assets.xcassets */,
-				C6F3CB3A29271DF500F14697 /* resnet_20e_SGD_GS27.mlmodel */,
+				C6E28A532935A0EA009BC538 /* resnet_10e_SGD_GS9.mlmodel */,
 				F44543841EF0461F0024AFAC /* Info.plist */,
 			);
 			path = CoreMLDemo;
@@ -262,13 +262,13 @@
 				C6422A6929286CFE00F20EA5 /* TeamMembersViewController.swift in Sources */,
 				C6422A6B2928795A00F20EA5 /* Member.swift in Sources */,
 				C61D948E292C735400D02829 /* FaqViewController.swift in Sources */,
+				C6E28A542935A0EA009BC538 /* resnet_10e_SGD_GS9.mlmodel in Sources */,
 				261DA839223D97420056C40C /* AppointmentVC.swift in Sources */,
 				261DA837223D90900056C40C /* DoctorListVC.swift in Sources */,
 				261DA83B223DAD6C0056C40C /* AppointmentConfirmVC.swift in Sources */,
 				F445437B1EF0461F0024AFAC /* SubmitPhotoViewController.swift in Sources */,
 				C6422A6F292C59DF00F20EA5 /* HowToUseViewController.swift in Sources */,
 				F44543791EF0461F0024AFAC /* AppDelegate.swift in Sources */,
-				C6F3CB3B29271DF500F14697 /* resnet_20e_SGD_GS27.mlmodel in Sources */,
 				C6422A6D29287DEA00F20EA5 /* TeamMembersCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
