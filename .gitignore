@@ -1,6 +1,7 @@
 # Custom
 Data/
-data/
+model_files/
+data/image_data/
 data_class_folder*/
 simple_images/
 model/
