@@ -11,4 +11,4 @@ The goal of dermcheck.ai is to create a mobile app that could classify different
 
 **Please see [google drive folder](https://drive.google.com/drive/folders/1oLqejM9KnDiIgUupEGkxGM3_vdqboxlI?usp=sharing) for datasets, codes, model checkpoints and etc. for items not found in current GitHub Repo.**
 
-**Checkout our Berkeley's [project summary page](https://www.ischool.berkeley.edu/projects/2022/dermcheckai) and [website](https://gerritlensink.wixsite.com/dermcheck-ai)!**
+**Check out our Berkeley's [project summary page](https://www.ischool.berkeley.edu/projects/2022/dermcheckai) and [website](https://gerritlensink.wixsite.com/dermcheck-ai)!**
