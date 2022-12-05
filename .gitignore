@@ -6,6 +6,9 @@ data_class_folder*/
 simple_images/
 model/
 yolov5/
+*.mlmodel
+.DS_Store
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
