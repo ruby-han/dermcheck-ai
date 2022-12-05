@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "how_to_use2.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
